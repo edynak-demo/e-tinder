@@ -22,6 +22,11 @@ angular
         templateUrl: "templates/menu.html",
       })
 
+      .state("login", {
+        url: "/login",
+        templateUrl: "templates/login.html",
+      })
+
       .state("app.profile", {
         url: "/profile",
         views: {
@@ -49,5 +54,5 @@ angular
       });
 
     // if none of the above states are matched, use this as the fallback
-    $urlRouterProvider.otherwise("/app/home");
+    $urlRouterProvider.otherwise("/login");
   });
